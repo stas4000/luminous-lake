@@ -1,0 +1,24 @@
+{
+  "name": "luminous-lake",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "test": "node --test test/*.test.js",
+    "test:e2e": "playwright test",
+    "lint": "eslint src test vite.config.js eslint.config.js playwright.config.js",
+    "build": "vite build",
+    "check": "npm run test && npm run lint && npm run build",
+    "validate": "npm run check && npm run test:e2e"
+  },
+  "dependencies": {
+    "three": "^0.179.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "@playwright/test": "^1.61.1",
+    "eslint": "^9.34.0",
+    "vite": "^7.1.3"
+  }
+}

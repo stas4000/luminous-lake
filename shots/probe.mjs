@@ -1,0 +1,13 @@
+import { chromium } from '@playwright/test';
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+await page.goto('http://127.0.0.1:4180');
+await page.waitForFunction(() => window.__luminous?.getState, null, { timeout: 30000 });
+await page.waitForTimeout(2500);
+await page.evaluate(() => { const L = window.__luminous; L.setTimeOfDay(0.36); L.setWeather(0.1); });
+await page.waitForTimeout(1500);
+await page.screenshot({ path: 'artifacts/probe-mobile-collapsed.png' });
+await page.locator('#panel-handle').click();
+await page.waitForTimeout(800);
+await page.screenshot({ path: 'artifacts/probe-mobile-expanded.png' });
+await browser.close();

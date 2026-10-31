@@ -8,6 +8,8 @@ cycle — all touch-friendly and running smoothly on phones.
 
 **Live demo:** https://forest-lake.bles-software.com
 
+**More to explore:** [20 full-screen UI concepts](https://www.bles-software.com/inspiration/ui-systems/?utm_source=bles-demo&utm_medium=github-luminous-lake&utm_campaign=demo-exit) from Bles Software, the team behind this repo. Free to browse and download, no sign-up.
+
 ![Luminous Lake — desktop](docs/screenshots/desktop.png)
 
 ## Highlights
